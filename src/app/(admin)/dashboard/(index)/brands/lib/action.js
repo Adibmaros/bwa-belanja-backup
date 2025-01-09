@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { brandSchema } from "@/lib/schema";
 import { deleteFile, uploadBrandLogo } from "@/lib/supabase";
+import prisma from "@/lib/prisma";
 
 export async function postBrand(_, formData) {
   const validate = brandSchema.safeParse({
@@ -82,16 +83,17 @@ export async function updateBrand(_, formData, id) {
 }
 
 export async function deleteBrand(_, formData, id) {
-  console.log(id);
 
   const brand = await prisma.brand.findFirst({
     where: {
-      id: id,
+      id : id
     },
     select: {
       logo: true,
     },
   });
+
+  console.log(brand);
 
   if (!brand) {
     return {
@@ -100,15 +102,14 @@ export async function deleteBrand(_, formData, id) {
   }
 
   try {
-    deleteFile(brand.logo, "brands");
+    deleteFile(brand?.logo, "brands");
 
     await prisma.brand.delete({
       where: {
         id: id,
       },
     });
-  } catch (err) {
-    console.log(err);
+  } catch(err) {
     return {
       message: "Failed to delete brand",
     };

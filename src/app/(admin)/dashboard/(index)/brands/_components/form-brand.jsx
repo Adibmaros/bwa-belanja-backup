@@ -48,7 +48,7 @@ const FormBrand = ({data,type}) => {
                                         strokeWidth="2"
                                         d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
-                                <span>{state.message}</span>
+                                <span>{state?.message}</span>
                             </div>}
                             <div className="flex flex-col space-y-1.5 mb-2">
                                 <Label className="mb-1" htmlFor="name">Name</Label>

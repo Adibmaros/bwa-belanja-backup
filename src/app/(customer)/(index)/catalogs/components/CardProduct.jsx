@@ -13,7 +13,7 @@ const CardProduct = ({item}) => {
                 </div>
                 <div className="flex flex-col gap-[10px]">
                     <div className="flex flex-col gap-1">
-                        <p className="font-semibold leading-[22px]">{item?.name}</p>
+                        <p className="font-semibold leading-[22px] text-black">{item?.name}</p>
                         <p className="text-sm text-[#616369]">{item?.category_name}</p>
                     </div>
                     <p className="font-semibold text-[#0D5CD7] leading-[22px]">{rupiahFormat(Number(item.price))}</p>

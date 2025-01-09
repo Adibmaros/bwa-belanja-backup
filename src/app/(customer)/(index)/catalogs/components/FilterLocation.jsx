@@ -8,7 +8,7 @@ const FilterLocation = async () => {
 
     return (
         <div className="flex flex-col gap-[14px]">
-            <p className="font-semibold leading-[22px]">Location</p>
+            <p className="font-semibold leading-[22px] text-black">Location</p>
             {locations.map((item) => (
                 <FilterCheckboxItem type="location" id={item.id.toString()} key={item.id + item.name} value={item.name}  />
             ))}

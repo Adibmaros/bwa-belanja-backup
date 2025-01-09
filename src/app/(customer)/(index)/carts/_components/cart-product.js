@@ -20,13 +20,13 @@ const CartProduct = () => {
                                  className="w-full h-full object-contain" alt=""/>
                         </div>
                         <div className="flex flex-col gap-1">
-                            <p className="font-semibold leading-[22px]">{product?.name}</p>
-                            <p className="text-sm text-[#616369]">{product.category_name}</p>
+                            <p className="font-semibold leading-[22px] text-black">{product?.name}</p>
+                            <p className="text-sm text-[#616369] ">{product.category_name}</p>
                         </div>
                     </div>
                     <div className="w-[150px] flex flex-col gap-1">
                         <p className="text-sm text-[#616369]">Price</p>
-                        <p className="font-semibold text-[#0D5CD7] leading-[22px]">{rupiahFormat(product?.price)}</p>
+                        <p className="font-semibold text-[#0D5CD7] leading-[22px] text-black">{rupiahFormat(product?.price)}</p>
                     </div>
                     <div className="w-[120px] flex flex-col gap-1">
                         <p className="text-sm text-[#616369]">Quantity</p>
@@ -44,7 +44,7 @@ const CartProduct = () => {
                         <p className="text-sm text-[#616369]">Total</p>
                         <p className="font-semibold text-[#0D5CD7] leading-[22px]">{rupiahFormat(product.price * product.quantity)}</p>
                     </div>
-                    <button type="button" onClick={() => removeQuantity(product.id)}
+                    <button type="button" onClick={() => removeProduct(product.id)}
                         className="p-[12px_24px] bg-white rounded-full text-center font-semibold border border-[#E5E5E5]">Remove
                     </button>
                 </div>

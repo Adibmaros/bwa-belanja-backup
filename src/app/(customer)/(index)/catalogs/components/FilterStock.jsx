@@ -4,7 +4,7 @@ import FilterCheckboxItem from "@/app/(customer)/(index)/catalogs/components/Fil
 const FilterStock = () => {
     return (
         <div className="flex flex-col gap-[14px]">
-            <p className="font-semibold leading-[22px]">Stocks</p>
+            <p className="font-semibold leading-[22px] text-black">Stocks</p>
             <FilterCheckboxItem type="stock" id={"preorder"} value={"Pre Order"}  />
             <FilterCheckboxItem type="stock" id={"ready"} value={"Ready"}  />
 

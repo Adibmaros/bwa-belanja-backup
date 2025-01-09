@@ -8,7 +8,7 @@ const FilterKategori = async () => {
 
     return (
         <div className="flex flex-col gap-[14px]">
-            <p className="font-semibold leading-[22px]">Categories</p>
+            <p className="font-semibold leading-[22px] text-black">Categories</p>
             {categories.map((item) => (
                 <FilterCheckboxItem type="category" id={item.id.toString()} key={item.id + item.name} value={item.name}  />
             ))}

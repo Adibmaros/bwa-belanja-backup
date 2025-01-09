@@ -9,10 +9,10 @@ const ListBrands = async () => {
     return (
         <div id="brands" className="flex flex-col gap-[30px]">
             <div className="flex items-center justify-between">
-                <h2 className="font-bold text-2xl leading-[34px]">
+                <h2 className="font-bold text-2xl leading-[34px] text-black">
                     Explore Our <br/> Popular Brands
                 </h2>
-                <a href="catalog.html" className="p-[12px_24px] border border-[#E5E5E5] rounded-full font-semibold">
+                <a href="catalog.html" className="p-[12px_24px] border border-[#E5E5E5] rounded-full font-semibold text-black">
                     Explore All
                 </a>
             </div>

@@ -12,7 +12,7 @@ export const schemaSignUp = loginSchema.extend({
 });
 
 export const categorySchema = z.object({
-  name: z.string({ required_error: "name is required" }).min(4, { message: "name length must be at least 4 characters" }),
+  name: z.string({ required_error: "name is required" }).min(1, { message: "name length must be at least 2 characters" }),
 });
 
 export const brandSchema = categorySchema.extend({

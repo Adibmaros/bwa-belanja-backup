@@ -16,6 +16,6 @@ export default async function RootLayout({ children }) {
   }
 
   return (
-      <div className={poppins.className}>{children}</div>
+      <div className="bg-white">{children}</div>
   );
 }

@@ -24,39 +24,39 @@ const PriceInfo = ({item, isLogin}) => {
             <div
                 className="w-full bg-white border border-[#E5E5E5] flex flex-col gap-[30px] p-[30px] rounded-3xl">
                 <div className="flex flex-col gap-1">
-                    <p className="font-semibold">{item?.name}</p>
-                    <p className="font-bold text-[32px] leading-[48px]">{rupiahFormat(item?.price)}</p>
+                    <p className="font-semibold text-black">{item?.name}</p>
+                    <p className="font-bold text-[32px] leading-[48px] text-black">{rupiahFormat(item?.price)}</p>
                 </div>
                 <div className="flex flex-col gap-4">
                     <div className="flex items-center gap-2">
                         <div className="flex shrink-0">
                             <img src="/assets/icons/tick-circle.svg" alt="icon"/>
                         </div>
-                        <p className="font-semibold">Peti telur packaging</p>
+                        <p className="font-semibold text-black">Peti telur packaging</p>
                     </div>
                     <div className="flex items-center gap-2">
                         <div className="flex shrink-0">
                             <img src="/assets/icons/tick-circle.svg" alt="icon"/>
                         </div>
-                        <p className="font-semibold">Manual book instructions</p>
+                        <p className="font-semibold text-black">Manual book instructions</p>
                     </div>
                     <div className="flex items-center gap-2">
                         <div className="flex shrink-0">
                             <img src="/assets/icons/tick-circle.svg" alt="icon"/>
                         </div>
-                        <p className="font-semibold">Customer service 24/7</p>
+                        <p className="font-semibold text-black">Customer service 24/7</p>
                     </div>
                     <div className="flex items-center gap-2">
                         <div className="flex shrink-0">
                             <img src="/assets/icons/tick-circle.svg" alt="icon"/>
                         </div>
-                        <p className="font-semibold">Free delivery Jababeka</p>
+                        <p className="font-semibold text-black">Free delivery Jababeka</p>
                     </div>
                     <div className="flex items-center gap-2">
                         <div className="flex shrink-0">
                             <img src="/assets/icons/tick-circle.svg" alt="icon"/>
                         </div>
-                        <p className="font-semibold">Kwitansi orisinal 100%</p>
+                        <p className="font-semibold text-black">Kwitansi orisinal 100%</p>
                     </div>
                 </div>
                 <div className="flex flex-col gap-3">
@@ -64,7 +64,7 @@ const PriceInfo = ({item, isLogin}) => {
                        className="p-[12px_24px] bg-[#0D5CD7] rounded-full text-center font-semibold text-white disabled:opacity-60">Add
                         to Cart</button>
                     <a href=""
-                       className="p-[12px_24px] bg-white rounded-full text-center font-semibold border border-[#E5E5E5]">Save
+                       className="p-[12px_24px] bg-white rounded-full text-center font-semibold border border-[#E5E5E5] text-black">Save
                         to Wishlist</a>
                 </div>
             </div>
@@ -77,8 +77,8 @@ const PriceInfo = ({item, isLogin}) => {
                             <img src="/assets/icons/cake.svg" alt="icon"/>
                         </div>
                         <div className="flex flex-col gap-[2px]">
-                            <p className="font-semibold">Buy as a Gift</p>
-                            <p className="text-sm">Free Delivery</p>
+                            <p className="font-semibold text-black">Buy as a Gift</p>
+                            <p className="text-sm text-black">Free Delivery</p>
                         </div>
                     </div>
                     <div className="flex shrink-0">

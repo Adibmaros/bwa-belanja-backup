@@ -32,7 +32,7 @@ export const columns = [
               <Edit className="h-4 w-4" /> Edit
             </Link>
           </Button>
-          <FormDelete id={brand.id} />
+          <FormDelete id={brand?.id} />
         </div>
       );
     },

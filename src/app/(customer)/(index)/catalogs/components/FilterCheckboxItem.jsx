@@ -70,7 +70,7 @@ const FilterCheckboxItem = ({id, value , type}) => {
                 value={id}
                 className="w-6 h-6 flex shrink-0 appearance-none checked:border-[3px] checked:border-solid checked:border-white rounded-md checked:bg-[#0D5CD7] ring-1 ring-[#0D5CD7]"
             />
-            <span>{value}</span>
+            <span className="text-black" >{value}</span>
         </label>
     );
 };

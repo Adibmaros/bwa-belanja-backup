@@ -8,7 +8,7 @@ const FilterBrand = async () => {
 
     return (
         <div className="flex flex-col gap-[14px]">
-            <p className="font-semibold leading-[22px]">Brands</p>
+            <p className="font-semibold leading-[22px] text-black">Brands</p>
             {brands.map((item) => (
                 <FilterCheckboxItem type="brand" id={item.id.toString()} key={item.id + item.name} value={item.name}  />
             ))}

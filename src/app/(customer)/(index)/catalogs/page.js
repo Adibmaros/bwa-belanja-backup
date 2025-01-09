@@ -31,7 +31,7 @@ const Page = () => {
                 </form>
                 <div
                     className="w-[780px] flex flex-col bg-white p-[30px] gap-[30px] h-fit border border-[#E5E5E5] rounded-[30px]">
-                    <h2 className="font-bold text-2xl leading-[34px]">Products</h2>
+                    <h2 className="font-bold text-2xl leading-[34px] text-black">Products</h2>
                     <ProductListing/>
                 </div>
             </div>
