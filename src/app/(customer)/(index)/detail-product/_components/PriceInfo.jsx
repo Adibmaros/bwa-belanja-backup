@@ -3,7 +3,7 @@
 import React from 'react';
 import {rupiahFormat} from "@/lib/utils";
 import {useCart} from "@/hooks/useCart";
-import {useRouter} from "next/Navigation";
+import {useRouter} from "next/navigation";
 
 const PriceInfo = ({item, isLogin}) => {
 
