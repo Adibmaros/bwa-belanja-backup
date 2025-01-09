@@ -16,13 +16,13 @@ const page = async () => {
       </div>
       <div>
         <div className="py-3 text-right">
-          <Button asChild>
-            {/* <Link href="/dashboard/orders/create">
-              {" "}
-              <Plus className="rounded-xl border " size={"sm"} />
-              Add Brands
-            </Link> */}
-          </Button>
+          {/*<Button asChild>*/}
+          {/*  /!* <Link href="/dashboard/orders/create">*/}
+          {/*    {" "}*/}
+          {/*    <Plus className="rounded-xl border " size={"sm"} />*/}
+          {/*    Add Brands*/}
+          {/*  </Link> *!/*/}
+          {/*</Button>*/}
         </div>
         <DataTable columns={columns} data={order} />
       </div>
