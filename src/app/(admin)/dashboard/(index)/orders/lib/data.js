@@ -1,4 +1,5 @@
 import { getImageUrl } from "@/lib/supabase";
+import prisma from "@/lib/prisma";
 
 export async function getOrder() {
   try {
