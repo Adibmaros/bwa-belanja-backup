@@ -84,7 +84,7 @@ const Page = async ({ params }) => {
                       <img src="/assets/photos/p2.png" className="w-full h-full object-cover rounded-full" alt="photo" />
                     </div>
                     <div className="flex flex-col gap-[2px]">
-                      <p className="font-semibold text-sm leading-[22px] text-black">Angga Risky</p>
+                      <p className="font-semibold text-sm leading-[22px] text-black">Adib M Maros</p>
                       <p className="text-xs leading-[18px] text-black">12 January 2028</p>
                     </div>
                   </div>

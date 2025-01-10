@@ -26,9 +26,16 @@ const CheckoutForm = () => {
 
   const [state, formAction] = useActionState(storeOrderParams, initialState);
 
-  const grandTotal = useMemo(() => {
+  // Calculate Sub Total
+  const subTotal = useMemo(() => {
     return products.reduce((total, product) => total + product.quantity * product.price, 0);
   }, [products]);
+
+  // Calculate PPN 11%
+  const ppn = useMemo(() => subTotal * 0.11, [subTotal]);
+
+  // Grand Total after adding PPN
+  const grandTotal = useMemo(() => subTotal + ppn, [subTotal, ppn]);
 
   return (
     <form action={formAction} id="checkout-info" className="container max-w-[1130px] mx-auto flex flex-col md:flex-row justify-between gap-5 mt-[50px] pb-[100px]">
@@ -87,23 +94,6 @@ const CheckoutForm = () => {
       <div className="w-full md:flex-1 flex flex-col shrink-0 gap-4 h-fit order-2 md:order-none">
         <h2 className="font-bold text-2xl leading-[34px] text-black">Payment Details</h2>
         <div className="w-full bg-white border border-[#E5E5E5] flex flex-col gap-[30px] p-[30px] rounded-3xl">
-          {/* Payment details */}
-          <a href="">
-            <div className="w-full bg-white border border-[#E5E5E5] flex items-center justify-between gap-2 p-5 rounded-3xl">
-              <div className="flex items-center gap-[10px]">
-                <div className="w-12 h-12 flex shrink-0 rounded-full bg-[#FFC736] items-center justify-center overflow-hidden">
-                  <img src="assets/icons/cake.svg" alt="icon" />
-                </div>
-                <div className="flex flex-col gap-[2px]">
-                  <p className="font-semibold text-black">100% It&apos;s Original</p>
-                  <p className="text-sm text-black">We don&apos;t sell fake products</p>
-                </div>
-              </div>
-              <div className="flex shrink-0">
-                <img src="assets/icons/arrow-right.svg" alt="icon" />
-              </div>
-            </div>
-          </a>
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -112,7 +102,7 @@ const CheckoutForm = () => {
                 </div>
                 <p className="text-black">Sub Total</p>
               </div>
-              <p className="font-semibold text-black">{rupiahFormat(grandTotal)}</p>
+              <p className="font-semibold text-black">{rupiahFormat(subTotal)}</p>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -148,7 +138,7 @@ const CheckoutForm = () => {
                 </div>
                 <p className="text-black">PPN 11%</p>
               </div>
-              <p className="font-semibold text-black">Rp 0</p>
+              <p className="font-semibold text-black">{rupiahFormat(ppn)}</p>
             </div>
           </div>
           <div className="flex flex-col gap-1">
