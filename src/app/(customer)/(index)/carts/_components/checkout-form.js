@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useActionState, useMemo } from "react";
 import { useCart } from "@/hooks/useCart";
 import { rupiahFormat } from "@/lib/utils";
@@ -22,7 +21,7 @@ const CheckOutButton = () => {
 const CheckoutForm = () => {
   const { products } = useCart();
 
-  const storeOrderParams = (_, formData, total, product) => storeOrder(_, formData, total, products);
+  const storeOrderParams = (_, formData, total, product) => storeOrder(_, formData, grandTotal, products);
 
   const [state, formAction] = useActionState(storeOrderParams, initialState);
 
