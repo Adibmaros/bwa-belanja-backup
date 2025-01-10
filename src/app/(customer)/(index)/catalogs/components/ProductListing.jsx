@@ -27,7 +27,7 @@ const ProductListing =  () => {
 
 
     return (
-        <div className="grid grid-cols-3 gap-[30px]">
+        <div className="grid grid-cols-3 gap-[60px]">
              {data?.map((product) => (
                 <CardProduct key={product?.id}  item={product}  />
             ))}
