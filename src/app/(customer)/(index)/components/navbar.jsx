@@ -9,7 +9,7 @@ const Navbar = async () => {
     const { user, session } = await getUser();
 
     return (
-        <nav className="container max-w-[1130px] mx-auto px-4 md:px-5">
+        <nav className="container max-w-[1130px] mx-auto mb-10 px-4 md:px-5">
             <div className="flex items-center justify-between bg-[#0D5CD7] p-4 md:p-5 rounded-2xl md:rounded-3xl relative">
                 {/* Logo */}
                 <div className="flex shrink-0 z-20">

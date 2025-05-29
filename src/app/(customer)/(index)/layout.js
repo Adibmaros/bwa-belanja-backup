@@ -15,7 +15,5 @@ export default async function RootLayout({ children }) {
     return redirect("/sign-in"); // Tambahkan return setelah redirect
   }
 
-  return (
-      <div className="bg-white">{children}</div>
-  );
+  return <div className="bg-white">{children}</div>;
 }
