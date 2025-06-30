@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "keepalive": "node scripts/test-keepalive.js",
+    "keepalive:test": "curl -X GET http://localhost:3000/api/keep-alive || echo 'Local server not running'"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
